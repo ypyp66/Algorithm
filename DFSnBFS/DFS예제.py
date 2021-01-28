@@ -1,14 +1,4 @@
 #인접리스트
-
-def dfs(v):
-    global visited, graph
-    visited[v] = True #현재 노드를 방문처리 (일단 시작인 첫번째 노드 방문처리)
-    print(v, end=' ')
-
-    for i in graph[v]: #graph[1]의 요소를 하나씩 검사
-        if not visited[i]:
-            dfs(i)
-
 graph = [
     # 총 9줄
     # 각 줄은 노드의 번호
@@ -23,6 +13,17 @@ graph = [
     [2,6,8],
     [1,7]
 ]
+
+def dfs(v):
+    global visited, graph
+    visited[v] = True #현재 노드를 방문처리 (일단 시작인 첫번째 노드 방문처리)
+    print(v, end=' ')
+
+    for i in graph[v]: #graph[1]의 요소를 하나씩 검사
+        if not visited[i]:
+            dfs(i)
+
+
 
 '''
 처음에 1번 노드에서 시작 -> 1번 방문처리                                                          => 1
