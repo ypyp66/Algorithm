@@ -9,7 +9,7 @@ const quick_sort = (array) => {
   }
 
   const pivot = array[0];
-  const tail = array.slice(1, array.length);
+  const tail = array.slice(1, array.length); //array[1] ~ array[끝]
 
   tail.forEach((element) => {
     if (element <= pivot) left.push(element);
