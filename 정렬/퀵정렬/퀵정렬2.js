@@ -12,13 +12,13 @@ const quick_sort = (array) => {
   const tail = array.slice(1, array.length); //array[1] ~ array[끝]
 
   tail.forEach((element) => {
-    if (element <= pivot) left.push(element);
+    if (element <= pivot) {
+      left.push(element);
+    } else {
+      right.push(element);
+    }
   });
-
-  tail.forEach((element) => {
-    if (element > pivot) right.push(element);
-  });
-
   return quick_sort(left) + [pivot] + quick_sort(right);
 };
+
 console.log(quick_sort(array));
